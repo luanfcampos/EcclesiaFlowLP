@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecclesia Flow - Gestão para Igrejas Modernas</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+  <script type="module" crossorigin src="/EcclesiaFlowLP/assets/index-D6oa7GYI.js"></script>
+  <link rel="stylesheet" crossorigin href="/EcclesiaFlowLP/assets/index-B1ZPaLJE.css">
+</head>
+<body class="font-sans antialiased text-slate-800 bg-slate-50 overflow-x-hidden">
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-accent-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-32 left-1/3 w-96 h-96 bg-purple-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav x-data="{ open: false, scrolled: false }" 
+         @scroll.window="scrolled = (window.pageYOffset > 20)"
+         :class="scrolled ? 'glass shadow-sm py-3' : 'bg-transparent py-5'"
+         class="fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <div class="bg-gradient-to-tr from-brand-600 to-accent-500 p-2 rounded-lg text-white">
+                        <i data-lucide="church" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-700">
+                        Ecclesia Flow
+                    </span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#recursos" class="text-slate-600 hover:text-brand-600 font-medium transition">Recursos</a>
+                    <a href="#aplicativo" class="text-slate-600 hover:text-brand-600 font-medium transition">Aplicativo</a>
+                    <a href="#precos" class="text-slate-600 hover:text-brand-600 font-medium transition">Planos</a>
+                    <a href="#" class="text-slate-900 font-semibold hover:text-brand-600 transition">Entrar</a>
+                    <a href="#" class="px-5 py-2.5 rounded-full bg-slate-900 text-white font-semibold hover:bg-slate-800 transition shadow-lg hover:shadow-brand-500/25 transform hover:-translate-y-0.5">
+                        Testar Grátis
+                    </a>
+                </div>
+
+                <!-- Mobile Button -->
+                <div class="md:hidden flex items-center">
+                    <button @click="open = !open" class="text-slate-600">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="open" 
+             x-transition
+             class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-slate-100 p-4 flex flex-col space-y-4">
+            <a href="#recursos" class="text-slate-600 font-medium">Recursos</a>
+            <a href="#precos" class="text-slate-600 font-medium">Planos</a>
+            <a href="#" class="w-full text-center py-3 bg-brand-600 text-white rounded-lg font-bold">Começar Agora</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <div data-aos="fade-down" class="inline-flex items-center px-3 py-1 rounded-full border border-brand-200 bg-brand-50 text-brand-700 text-sm font-medium mb-6">
+                    <span class="flex h-2 w-2 rounded-full bg-brand-500 mr-2"></span>
+                    Novo: Integração com PIX Automático
+                </div>
+                <h1 data-aos="fade-up" data-aos-delay="100" class="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
+                    A gestão da sua igreja <br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-accent-500 to-purple-600">
+                        simplificada e digital.
+                    </span>
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Menos burocracia, mais tempo para o ministério. Cuide dos membros, organize as finanças e gerencie escalas em uma única plataforma.
+                </p>
+                <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#" class="px-8 py-4 rounded-full bg-gradient-to-r from-brand-600 to-accent-600 text-white font-bold text-lg hover:shadow-lg hover:shadow-brand-500/40 transition transform hover:-translate-y-1">
+                        Começar teste de 14 dias
+                    </a>
+                    <a href="#" class="px-8 py-4 rounded-full bg-white border border-slate-200 text-slate-700 font-bold text-lg hover:bg-slate-50 transition flex items-center justify-center gap-2 group">
+                        <i data-lucide="play-circle" class="w-5 h-5 text-brand-600 group-hover:scale-110 transition"></i>
+                        Ver demonstração
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dashboard Mockup -->
+            <div data-aos="fade-up" data-aos-delay="400" class="relative mx-auto max-w-5xl">
+                <div class="relative rounded-2xl border border-slate-200 bg-white/50 backdrop-blur-xl shadow-2xl p-2 md:p-4">
+                    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-slate-50/50 pointer-events-none z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2426&q=80" alt="Dashboard da Igreja" class="rounded-xl shadow-inner border border-slate-100 w-full opacity-90">
+                    
+                    <!-- Floating Cards -->
+                    <div class="absolute -right-4 top-10 md:-right-12 md:top-20 bg-white p-4 rounded-xl shadow-xl border border-slate-100 animate-float hidden sm:block">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-green-100 p-2 rounded-full text-green-600">
+                                <i data-lucide="trending-up" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium">Entradas Hoje</p>
+                                <p class="text-lg font-bold text-slate-900">R$ 12.450,00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute -left-4 bottom-10 md:-left-12 md:bottom-20 bg-white p-4 rounded-xl shadow-xl border border-slate-100 animate-float hidden sm:block" style="animation-delay: 2s;">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-blue-100 p-2 rounded-full text-blue-600">
+                                <i data-lucide="users" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium">Novos Visitantes</p>
+                                <p class="text-lg font-bold text-slate-900">+18 essa semana</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-10 border-y border-slate-200 bg-white/50">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-6">Confiança de mais de 1.200 igrejas no Brasil</p>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex items-center gap-2 font-bold text-xl"><i data-lucide="anchor" class="w-6 h-6"></i> Batista Renovada</div>
+                <div class="flex items-center gap-2 font-bold text-xl"><i data-lucide="flame" class="w-6 h-6"></i> Comunidade Viva</div>
+                <div class="flex items-center gap-2 font-bold text-xl"><i data-lucide="heart-handshake" class="w-6 h-6"></i> Lagoinha Digital</div>
+                <div class="flex items-center gap-2 font-bold text-xl"><i data-lucide="mountain" class="w-6 h-6"></i> Igreja do Monte</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section (Bento Grid) -->
+    <section id="recursos" class="py-24 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-base text-brand-600 font-semibold tracking-wide uppercase">Funcionalidades</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                    Tudo o que sua secretaria precisa
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div data-aos="fade-up" class="md:col-span-2 bg-white rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition group overflow-hidden relative">
+                    <div class="absolute top-0 right-0 p-10 opacity-10 group-hover:opacity-20 transition group-hover:scale-110 duration-500">
+                        <i data-lucide="wallet" class="w-64 h-64 text-brand-600"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                            <i data-lucide="landmark" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Gestão Financeira Completa</h3>
+                        <p class="text-slate-600 mb-6 max-w-md">Controle dízimos, ofertas e despesas com conciliação bancária automática.</p>
+                        <ul class="space-y-2 text-sm text-slate-500">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> Relatórios DRE automáticos</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> Gestão de contas a pagar</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 mb-6">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Membresia</h3>
+                    <p class="text-slate-600 text-sm">Cadastro detalhado de membros e trilho de crescimento.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 mb-6">
+                        <i data-lucide="calendar" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Escalas & Eventos</h3>
+                    <p class="text-slate-600 text-sm">Organize a escala do louvor e check-in via QR Code.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" class="md:col-span-2 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 shadow-lg text-white relative overflow-hidden">
+                    <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
+                        <div class="flex-1">
+                            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center text-white mb-6">
+                                <i data-lucide="smartphone" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3">App para o Membro</h3>
+                            <p class="text-slate-300 mb-6">Seu membro pode fazer pedidos de oração e acessar devocionais.</p>
+                            <button class="text-white font-semibold underline decoration-brand-500 underline-offset-4 hover:text-brand-400 transition">Conhecer o App &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="precos" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-slate-900">Planos que cabem no altar</h2>
+                <p class="mt-4 text-xl text-slate-600">Escolha conforme o tamanho da sua congregação.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Plan 1 -->
+                <div class="rounded-2xl p-8 border border-slate-200 bg-white hover:border-brand-300 transition-all hover:shadow-xl">
+                    <h3 class="text-xl font-semibold text-slate-900">Plantação</h3>
+                    <div class="my-6">
+                        <span class="text-4xl font-extrabold text-slate-900">R$ 0</span>
+                        <span class="text-slate-500">/mês</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-slate-600 text-sm"><i data-lucide="check-circle" class="w-5 h-5 text-brand-500 mr-2"></i> Até 50 membros</li>
+                    </ul>
+                    <button class="w-full py-3 rounded-xl border-2 border-slate-900 text-slate-900 font-bold hover:bg-slate-900 hover:text-white transition">Começar Grátis</button>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="rounded-2xl p-8 border-2 border-brand-500 bg-slate-900 text-white shadow-2xl relative transform md:-translate-y-4">
+                    <div class="absolute top-0 right-0 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">MAIS POPULAR</div>
+                    <h3 class="text-xl font-semibold">Crescimento</h3>
+                    <div class="my-6">
+                        <span class="text-4xl font-extrabold">R$ 97</span>
+                        <span class="text-slate-400">/mês</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-slate-300 text-sm"><i data-lucide="check-circle" class="w-5 h-5 text-brand-400 mr-2"></i> Até 300 membros</li>
+                        <li class="flex items-center text-slate-300 text-sm"><i data-lucide="check-circle" class="w-5 h-5 text-brand-400 mr-2"></i> Financeiro Completo</li>
+                    </ul>
+                    <button class="w-full py-3 rounded-xl bg-brand-500 text-white font-bold hover:bg-brand-400 transition shadow-lg shadow-brand-500/50">Escolher Plano</button>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="rounded-2xl p-8 border border-slate-200 bg-white hover:border-brand-300 transition-all hover:shadow-xl">
+                    <h3 class="text-xl font-semibold text-slate-900">Reino</h3>
+                    <div class="my-6">
+                        <span class="text-4xl font-extrabold text-slate-900">R$ 197</span>
+                        <span class="text-slate-500">/mês</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-slate-600 text-sm"><i data-lucide="check-circle" class="w-5 h-5 text-brand-500 mr-2"></i> Membros Ilimitados</li>
+                    </ul>
+                    <button class="w-full py-3 rounded-xl border-2 border-slate-900 text-slate-900 font-bold hover:bg-slate-900 hover:text-white transition">Falar com Consultor</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 pt-16 pb-8 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center gap-2 mb-4 md:mb-0">
+                    <i data-lucide="church" class="w-6 h-6 text-brand-600"></i>
+                    <span class="text-xl font-bold text-slate-900">Ecclesia Flow</span>
+                </div>
+                <p class="text-sm text-slate-500">&copy; 2024 Ecclesia Flow. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bibliotecas JS (Icones, Animações, Interatividade) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      // Inicializa os ícones globalmente
+      window.onload = function() {
+        lucide.createIcons();
+      };
+    </script>
+
+</body>
+</html>
